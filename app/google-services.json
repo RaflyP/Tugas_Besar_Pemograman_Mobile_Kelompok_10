@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "211391464784",
+    "project_id": "tugasbesarpemobkelompok10",
+    "storage_bucket": "tugasbesarpemobkelompok10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211391464784:android:f49b9bded7c76afa425855",
+        "android_client_info": {
+          "package_name": "com.example.tugasbesarpemogramanmobilekelompok10"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiLg3giwBhIQ3Vhf3w29p_RxaZDShhuKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
