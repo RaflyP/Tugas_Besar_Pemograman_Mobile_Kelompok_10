@@ -46,6 +46,7 @@ dependencies {
     // Firebase Authentication and Realtime Database dependencies
     implementation("com.google.firebase:firebase-auth:23.0.0")
     implementation("com.google.firebase:firebase-database:21.0.0")
+    implementation("com.google.firebase:firebase-analytics:21.0.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

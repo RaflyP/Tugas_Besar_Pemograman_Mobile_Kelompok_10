@@ -2,11 +2,11 @@ package com.example.tugasbesarpemogramanmobilekelompok10
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginPage : AppCompatActivity() {
@@ -33,21 +33,20 @@ class LoginPage : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             Toast.makeText(this, "Login Berhasil!", Toast.LENGTH_SHORT).show()
-                            // Proceed to MainActivity
-                            val intent = Intent(this@LoginPage, MainActivity::class.java)
+                            val intent = Intent(this@LoginPage, TampilProfile::class.java)
+                            intent.putExtra("key_email", email)
                             startActivity(intent)
                             finish()
                         } else {
-                            Toast.makeText(this, "Login Failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "Login Gagal: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
                         }
                     }
             } else {
-                Toast.makeText(this, "Please enter both email and password", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Isi email dan password.", Toast.LENGTH_SHORT).show()
             }
         }
 
         registerLink.setOnClickListener {
-            // Navigate to RegisterPage
             val intent = Intent(this@LoginPage, RegisterPage::class.java)
             startActivity(intent)
         }

@@ -2,10 +2,10 @@ package com.example.tugasbesarpemogramanmobilekelompok10
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -44,12 +44,12 @@ class RegisterPage : AppCompatActivity() {
                             val user = User(fullName, birthDate, gender, email)
 
                             if (userId != null) {
-                                database.child("Users").child(userId).setValue(user)
+                                database.child(userId).setValue(user)
                                     .addOnCompleteListener { dbTask ->
                                         if (dbTask.isSuccessful) {
                                             Toast.makeText(
                                                 this,
-                                                "Sign Up Successful!",
+                                                "Daftar berhasil!",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                             val intent = Intent(
@@ -61,7 +61,7 @@ class RegisterPage : AppCompatActivity() {
                                         } else {
                                             Toast.makeText(
                                                 this,
-                                                "Failed to save user data.",
+                                                "Error saat menyimpan data.",
                                                 Toast.LENGTH_SHORT
                                             ).show()
                                         }
@@ -70,13 +70,13 @@ class RegisterPage : AppCompatActivity() {
                         } else {
                             Toast.makeText(
                                 this,
-                                "Sign Up Failed: ${task.exception?.message}",
+                                "Error saat daftar: ${task.exception?.message}",
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
                     }
             } else {
-                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Isi semua kolom.", Toast.LENGTH_SHORT).show()
             }
         }
     }
